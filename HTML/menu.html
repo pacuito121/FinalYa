@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/fonts.css">
+    <link rel="stylesheet" href="../CSS/anim2.css">
+    <link rel="stylesheet" href="../CSS/menu.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flyonui@2.4.1/flyonui.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body style="background-color: #EBEBD3;" class="min-h-screen flex flex-col">
+    <header style="background-color: #DA4167; box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 1);" class="z-40 h-fit flex items-center justify-between p-4 m-4 mx-12 border-2 border-black">
+        <div class="w-1/4 flex items-center space-x-2 cursor-pointer">
+            <div onclick="window.location.href='../index.html'" class="flex items-end justify-center space-x-2 hover:rotate-3 hover:scale-110 transition-all">
+                <img src="../Img/Logo_A.png" class="h-14" alt="Logo Risko">
+                <p class="text-4xl font-bold text-white Cage">Risko</p>
+            </div>
+        </div>
+        <nav class="w-2/4 flex justify-center space-x-4">
+            <a href="galeria.html" style="color:black;background-color:#EBEBD3;font-family:'CaracolIsland','Courier New', Courier, monospace;font-size:24px;" class="px-3 py-2 w-1/4 text-center font-bold hover:translate-y-1 hover:shadow-none transition-all">Galería</a>
+            <a href="calendario.html" style="color:black;background-color:#EBEBD3;font-family:'CaracolIsland','Courier New', Courier, monospace;font-size:24px;" class="px-3 py-2 w-1/4 text-center font-bold hover:translate-y-1 hover:shadow-none transition-all">Calendario</a>
+            <a href="promocionales.html" style="color:black;background-color:#EBEBD3;font-family:'CaracolIsland','Courier New', Courier, monospace;font-size:24px;" class="px-3 py-2 w-1/4 text-center font-bold hover:translate-y-1 hover:shadow-none transition-all">Promocionales</a>
+            <a href="menu.html" style="color:black;background-color:#F4D35E; border: 2px solid black; box-shadow: 0px 3px 0px 0px rgba(0,0,0,1);font-family:'CaracolIsland','Courier New', Courier, monospace;font-size:24px;" class="px-3 py-2 w-1/4 text-center font-bold hover:translate-y-1 hover:shadow-none transition-all">Menu</a>
+        </nav>
+        <div class="w-1/4 flex justify-end pr-4">
+            <div id="profile" ondblclick="closeSesion()" onclick="if(!on){window.location.href='login.html'}" style="background-color: thistle; border: 2px solid black; box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 1);background-size: contain;" class="w-12 h-12 rounded-full hover:scale-110 transition-all cursor-pointer"></div>
+        </div>
+    </header>
+    <main class="contenedor-principal flex-1">
+
+        <h2 class="TresD text-[48px] text-black text-center">Menu</h2>
+
+        <section class="barra-menu">
+
+            <div class="buscador">
+
+                <input
+                    type="text"
+                    id="buscador"
+                    placeholder="Buscar producto...">
+
+                <div class="icono-busqueda">
+                    🔎
+                </div>
+
+            </div>
+
+            <select id="categoria"
+                class="boton-categorias">
+
+                <option value="todos">
+                    Categorías
+                </option>
+
+                <option value="bebida">
+                    Bebidas
+                </option>
+
+                <option value="snack">
+                    Snacks
+                </option>
+
+                <option value="postre">
+                    Postres
+                </option>
+
+            </select>
+
+        </section>
+
+        <section class="productos-grid">
+
+            <div class="tarjeta-producto bebida" data-nombre="pocion curativa">
+
+                <div class="fondo-tarjeta">
+                    <h3 class="text-2xl">$60.00</h3>
+                    <span class="text-lg">Refrescante infusión helada, rebosante de frutos rojos y moras frescas.</span>
+                </div>
+
+                <div class="contenido-tarjeta">
+
+                    <div class="contenedor-imagen">
+                        <img src="../Img/TeFrutosRojos.png" class="imagen-producto">
+                    </div>
+
+                    <p class="nombre-producto">
+                        Poción Curativa
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="tarjeta-producto bebida" data-nombre="elixir">
+
+                <div class="fondo-tarjeta">
+                    <h3 class="text-2xl">$75.00</h3>
+                    <span class="text-lg">Mágica bebida dulce de taro con suaves perlas de tapioca y una nube de crema batida.</span>
+                </div>
+
+                <div class="contenido-tarjeta">
+
+                    <div class="contenedor-imagen">
+                        <img src="../Img/Taro.png" class="imagen-producto">
+                    </div>
+
+                    <p class="nombre-producto">
+                        Elixir
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="tarjeta-producto bebida" data-nombre="latte">
+
+                <div class="fondo-tarjeta">
+                    <h3 class="text-2xl">$65.00</h3>
+                    <span class="text-lg">Reconfortante café latte caliente, elevado con el toque divertido de las perlas de tapioca.</span>
+                </div>
+
+                <div class="contenido-tarjeta">
+
+                    <div class="contenedor-imagen">
+                        <img src="../Img/Latte.png" class="imagen-producto">
+                    </div>
+
+                    <p class="nombre-producto">
+                        Latte
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="tarjeta-producto bebida" data-nombre="mocca">
+
+                <div class="fondo-tarjeta">
+                    <h3 class="text-2xl">$70.00</h3>
+                    <span class="text-lg">Irresistible café moca coronado con tiernos mini malvaviscos y trozos de chocolate.</span>
+                </div>
+
+                <div class="contenido-tarjeta">
+
+                    <div class="contenedor-imagen">
+                        <img src="../Img/Mocca.png" class="imagen-producto">
+                    </div>
+
+                    <p class="nombre-producto">
+                        Mocca
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="tarjeta-producto snack" data-nombre="sonic chilli dog">
+
+                <div class="fondo-tarjeta">
+                    <h3 class="text-2xl">$90.00</h3>
+                    <span class="text-lg">Épico hot dog bañado en chili casero, jalapeños picantes y crujientes aros de cebolla.</span>
+                </div>
+
+                <div class="contenido-tarjeta">
+
+                    <div class="contenedor-imagen">
+                        <img src="../Img/Hot Dog.png" class="imagen-producto">
+                    </div>
+
+                    <p class="nombre-producto">
+                        Sonic Chilli Dog
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="tarjeta-producto snack" data-nombre="papas">
+
+                <div class="fondo-tarjeta">
+                    <h3 class="text-2xl">$50.00</h3>
+                    <span class="text-lg">Clásicas papas a la francesa, doraditas, perfectamente crujientes y listas para compartir.</span>
+                </div>
+
+                <div class="contenido-tarjeta">
+
+                    <div class="contenedor-imagen">
+                        <img src="../Img/Papas.png" class="imagen-producto">
+                    </div>
+
+                    <p class="nombre-producto">
+                        Papas
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="tarjeta-producto snack" data-nombre="nachos">
+
+                <div class="fondo-tarjeta">
+                    <h3 class="text-2xl">$110.00</h3>
+                    <span class="text-lg">Montaña de crujientes totopos bañados en queso fundido, guacamole fresco, pico de gallo y jalapeños.</span>
+                </div>
+
+                <div class="contenido-tarjeta">
+
+                    <div class="contenedor-imagen">
+                        <img src="../Img/Nachos.png" class="imagen-producto">
+                    </div>
+
+                    <p class="nombre-producto">
+                        Nachos
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="tarjeta-producto snack" data-nombre="hamburguesa">
+
+                <div class="fondo-tarjeta">
+                    <h3 class="text-2xl">$130.00</h3>
+                    <span class="text-lg">Jugosa hamburguesa de res con queso derretido, tocino crujiente, vegetales frescos y papas a un lado.</span>
+                </div>
+
+                <div class="contenido-tarjeta">
+
+                    <div class="contenedor-imagen">
+                        <img src="../Img/Hamburguesa.png" class="imagen-producto">
+                    </div>
+
+                    <p class="nombre-producto">
+                        Hamburguesa
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="tarjeta-producto postre" data-nombre="cheesecake">
+
+                <div class="fondo-tarjeta">
+                    <h3 class="text-2xl">$80.00</h3>
+                    <span class="text-lg">Cremoso y decadente pastel de queso, bañado en un dulce sirope con fresas frescas.</span>
+                </div>
+
+                <div class="contenido-tarjeta">
+
+                    <div class="contenedor-imagen">
+                        <img src="../Img/Cheesecake.png" class="imagen-producto">
+                    </div>
+
+                    <p class="nombre-producto">
+                        Cheesecake
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="tarjeta-producto postre" data-nombre="brownie">
+
+                <div class="fondo-tarjeta">
+                    <h3 class="text-2xl">$60.00</h3>
+                    <span class="text-lg">Intenso y esponjoso brownie artesanal de chocolate, repleto de ricas chispas dulces.</span>
+                </div>
+
+                <div class="contenido-tarjeta">
+
+                    <div class="contenedor-imagen">
+                        <img src="../Img/Brownie.png" class="imagen-producto">
+                    </div>
+
+                    <p class="nombre-producto">
+                        Brownie
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="tarjeta-producto postre" data-nombre="donas">
+
+                <div class="fondo-tarjeta">
+                    <h3 class="text-2xl">$55.00</h3>
+                    <span class="text-lg">Trío de donas suaves y recién horneadas, con glaseados dulces y chispas de colores divertidas.</span>
+                </div>
+
+                <div class="contenido-tarjeta">
+
+                    <div class="contenedor-imagen">
+                        <img src="../Img/Donas.png" class="imagen-producto">
+                    </div>
+
+                    <p class="nombre-producto">
+                        Donas
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="tarjeta-producto postre" data-nombre="helado">
+
+                <div class="fondo-tarjeta">
+                    <h3 class="text-2xl">$70.00</h3>
+                    <span class="text-lg">Clásica copa de helado bañada en abundante jarabe de chocolate y coronada con la tradicional cereza.</span>
+                </div>
+
+                <div class="contenido-tarjeta">
+
+                    <div class="contenedor-imagen">
+                        <img src="../Img/Helado.png" class="imagen-producto">
+                    </div>
+
+                    <p class="nombre-producto">
+                        Helado
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    <footer class="w-full bg-black p-2 flex flex-col h-fit space-y-4">
+        <section section class="flex flex-row justify-between items-center w-full h-fit px-6">
+            <div >
+                <div onclick="window.location.href='index.html'" class="flex items-end justify-center space-x-2 hover:rotate-3 hover:scale-110 transition-all">
+                    <img src="../Img/LogoB.png" class="h-24" alt="Logo Risko">
+                    <p class="text-[48px] font-bold text-white Cage" style="filter: drop-shadow(0px 2px 0px #CE8900);">Risko</p>
+                </div>
+                <span class="text-[32px] AcuminReal text-white" style="filter: drop-shadow(2px 2px 0px #CC5200);">Documentos legales</span>
+                <div class="w-full text-left px-4 text-white">
+                    <p class="Acumin textLaing">Politica de privacidad</p>
+                    <p class="Acumin textLaing">Aviso legal</p>
+                    <p class="Acumin textLaing">Politica de cookies</p>
+                    <p class="Acumin textLaing">Términos y condiciones</p>
+                </div>
+            </div>
+            <div class="h-full">
+                <div class="h-1/5 relative space-y-4 flex flex-col justify-center">
+                    <span class=" text-[32px] AcuminReal text-white text-center" style="filter: drop-shadow(2px 2px 0px #45a2ff);">Ubicación y contacto</span>
+                    <div class="flex space-x-3 items-center justify-start w-full">
+                        <div class="flex items-center justify-center w-12 h-12 transparent rounded-full">
+                            <img class="h-8" src="../Img/Direc.png" alt="">
+                        </div>
+                        <div>
+                            <span class="Acumin text-[12px] text-white">Laguna De Tamiagua, Esquina Con C. Valle de Cuernavaca S/N, Partido Doblado, 32424 Juárez, Chih.</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4 items-center justify-start w-full">
+                        <div class="flex items-center justify-center w-12 h-12 transparent rounded-full">
+                            <img class="h-8" src="../Img/Phone.png" alt="">
+                        </div>
+                        <div>
+                            <span class="Acumin text-[12px] text-white">+52 656 292 2040</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4 items-center justify-start w-full">
+                        <div class="items-center justify-center w-12 h-12 transparent rounded-full">
+                            <img class="h-8" src="../Img/Mail.png" alt="">
+                        </div>
+                        <div>
+                            <span class="Acumin text-[12px] text-white">RiskoAc@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-row space-x-4 justify-center items-center">
+                        <img class="h-12" src="../Img/DA.png" alt="">
+                        <img class="h-12" src="../Img/Xter.png" alt="">
+                        <img class="h-12" src="../Img/Yutu.png" alt="">
+                        <img class="h-12" src="../Img/Face.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-white">
+                <span class="text-[32px] AcuminReal text-white" style="filter: drop-shadow(2px 2px 0px #CE8900);">Horarios</span>
+                <article>
+                    <div class="space-x-4">
+                        <span class="Acumin text-[20px]">
+                            Lunes - Viernes
+                        </span>
+                        <span class="AcuminReal italic text-[20px]">
+                            08:00 - 18:00
+                        </span>
+                    </div>
+                     <hr style="border: 0.5px solid rgb(254, 254, 254); width:100%; margin: 4px;">
+                     <div class="w-full flex flex-row justify-between">
+                        <span class="Acumin text-[20px]">
+                            Sabado
+                        </span>
+                        <span class="AcuminReal italic text-[20px]">
+                            11:00 - 20:00
+                        </span>
+                    </div>
+                     <hr style="border: 0.5px solid rgb(254, 254, 254); width:100%; margin: 4px;">
+                     <div class="w-full flex flex-row justify-between items-center">
+                        <span class="Acumin text-[20px]" style="color:#CE8900">
+                            Domingo
+                        </span>
+                        <img src="../Img/Mimir.png" alt="">
+                    </div>
+                </article>
+            </div>
+        </section>
+        <hr style="border: 0.5px solid rgb(254, 254, 254); width: 100%; margin: 4px;">
+        <section class="flex flex-row justify-between items-center w-full h-fit">
+            <span class="Acumin text-white text-[20px] ">@RiskoOficial</span>
+            <span class="Acumin text-white text-[20px] ">"...Y hasta que el cuerpo aguante"</span>
+        </section>
+    </footer>
+<script>
+
+        const buscador = document.getElementById("buscador");
+        const categoria = document.getElementById("categoria");
+        const productos = document.querySelectorAll(".tarjeta-producto");
+
+        function filtrarProductos() {
+
+            const texto = buscador.value.toLowerCase();
+            const categoriaSeleccionada = categoria.value;
+
+            productos.forEach(producto => {
+
+                const nombre = producto.dataset.nombre;
+
+                const coincideTexto = nombre.includes(texto);
+
+                const coincideCategoria =
+                    categoriaSeleccionada === "todos" ||
+                    producto.classList.contains(categoriaSeleccionada);
+
+                if (coincideTexto && coincideCategoria) {
+
+                    producto.style.display = "block";
+
+                } else {
+
+                    producto.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+        buscador.addEventListener("input", filtrarProductos);
+        categoria.addEventListener("change", filtrarProductos);
+
+    </script>
+<script>
+        function closeSesion(){
+            if(confirm("Deseas cerrar sesión?")){
+                let array = JSON.parse(localStorage.getItem("users"))
+                for(let i=0;i < Object.keys(array.Usuarios).length;i++){
+                    array.Usuarios[i].active = false;
+                }
+                localStorage.setItem("users", JSON.stringify(array))
+                location.reload()
+            }
+        }
+        let name = ''
+        let on = false
+        document.addEventListener("DOMContentLoaded",()=>{
+            let users = JSON.parse(localStorage.getItem("users"));
+            name = ''
+            on = false
+            if(users){
+                for(let i = 0; i < Object.keys(users.Usuarios).length; i++){
+                    if(users.Usuarios[i].active){
+                        on = true;
+                        name = users.Usuarios[i].user;
+                        break;
+                    } 
+                }
+                let foto = document.getElementById("profile");
+                if(on){
+                    
+                    if(name == "Guest") {
+                        foto.style.backgroundImage = 'url("../Img/Invitado.png")';
+                    } else if(name == "Admin") {
+                        foto.style.backgroundImage = 'url("../Img/Admin.png")';
+                    } else{
+                        foto.style.backgroundImage = 'url("../Img/Usuario.png")';
+                    }
+                }else{
+                    foto.style.backgroundImage = "none"
+                }
+            }
+        })
+        
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/flyonui@2.4.1/flyonui.min.js"></script>
+</body>
+</html>

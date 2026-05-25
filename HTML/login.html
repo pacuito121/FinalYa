@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flyonui@2.4.1/flyonui.min.css">
+    <link rel="stylesheet" href="../CSS/fonts.css">
+    <link rel="stylesheet" href="../CSS/anim.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="min-h-screen flex flex-col bg-fondo-retro">
+    <div id="Fondom">
+        <div class="Circle" id="N1"></div>
+        <div class="Cube" id="N2"></div>
+        <div class="Tria" id="N3"></div>
+        <div class="X" id="N4"></div>
+        <div class="Circle" id="N5"></div>
+        <div class="Cube" id="N6"></div>
+        <div class="Tria" id="N7"></div>
+        <div class="X" id="N8"></div>
+    </div>
+
+    <header style="background-color: #DA4167; box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 1);" class="z-40 h-fit flex items-center justify-between p-4 m-4 mx-12 border-2 border-black">
+
+        <div class="w-1/4 flex items-center space-x-2 cursor-pointer">
+            <div onclick="window.location.href='../index.html'" class="flex items-end justify-center space-x-2 hover:rotate-3 hover:scale-110 transition-all">
+                <img src="../Img/Logo_A.png" class="h-14" alt="Logo Risko">
+                <p class="text-4xl font-bold text-white Cage">Risko</p>
+            </div>
+        </div>
+        <nav class="w-2/4 flex justify-center space-x-4">
+            <a href="galeria.html" style="color:black;background-color:#EBEBD3;font-family:'CaracolIsland','Courier New', Courier, monospace;font-size:24px;" class="px-3 py-2 w-1/4 text-center font-bold hover:translate-y-1 hover:shadow-none transition-all">Galería</a>
+            <a href="calendario.html" style="color:black;background-color:#EBEBD3;font-family:'CaracolIsland','Courier New', Courier, monospace;font-size:24px;" class="px-3 py-2 w-1/4 text-center font-bold hover:translate-y-1 hover:shadow-none transition-all">Calendario</a>
+            <a href="promocionales.html" style="color:black;background-color:#EBEBD3;font-family:'CaracolIsland','Courier New', Courier, monospace;font-size:24px;" class="px-3 py-2 w-1/4 text-center font-bold hover:translate-y-1 hover:shadow-none transition-all">Promocionales</a>
+            <a href="menu.html" style="color:black;background-color:#F4D35E; border: 2px solid black; box-shadow: 0px 3px 0px 0px rgba(0,0,0,1);font-family:'CaracolIsland','Courier New', Courier, monospace;font-size:24px;" class="px-3 py-2 w-1/4 text-center font-bold hover:translate-y-1 hover:shadow-none transition-all">Menu</a>
+        </nav>
+        <div class="w-1/4 flex justify-end pr-4">
+            <div id="profile" onclick="if(!on){window.location.href='HTML/login.html'}" style="background-color: thistle; border: 2px solid black; box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 1);background-size: contain;" class="w-12 h-12 rounded-full hover:scale-110 transition-all cursor-pointer"></div>
+        </div>
+    </header>
+<main class=" ">
+    <form onsubmit="createUser(event)" id="create" style="background-color: #EBEBD3; box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 1);width: 30%; height:fit-content ;" class="relative z-10 p-4 mx-auto rounded-[50px] shadow-lg flex flex-col items-center space-y-6">
+    
+        
+        <div class="flex space-x-4 items-center justify-center w-3/4">
+            <button onclick="togle(2)" type="button" class="text-lg p-2 font-semibold hover:bg-amaclaro transition duration-300 ease-in-out hover:scale-105 hover:rounded-[15px]">
+                <span style="color: black;font-family: 'CageWorld','Courier New', Courier, monospace;">Iniciar sesión</span>
+            </button>
+            <button onclick="togle(1)" type="button" class=" text-lg p-2 font-semibold hover:bg-amaclaro transition duration-300 ease-in-out hover:scale-105 hover:rounded-[15px]">
+                <span style="color: black;font-family: 'CageWorld','Courier New', Courier, monospace;">Crear cuenta</span>
+            </button>
+        </div>
+
+        
+        <div class="flex space-x-4 items-center justify-center w-full">
+            <div class="flex items-center justify-center w-12 h-12 transparent rounded-full">
+                <img class="h-10" src="../Img/Yu.png" alt="Icono de usuario">
+            </div>
+            <div class="w-full">
+                <input required style="box-shadow: inset 3px 3px 0px 0px #A06600;" class="inset-shadow-xs bg-amascuro p-3 rounded-[5px] w-full text-gray-800 placeholder:text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400" type="text" id="user" name="user" placeholder="Usuario" required>
+                <label for="user" style="font-family:'AgencyFB','Courier New', Courier, monospace;font-size: 16px;font-weight: 600;">Nombre de usuario</label>
+            </div>
+        </div>
+
+        
+        <div class="flex space-x-4 items-center justify-center w-full">
+            <div class="flex items-center justify-center w-12 h-12 transparent rounded-full">
+                <img class="h-10" src="../Img/Reo.png" alt="Icono de correo">
+            </div>
+            <div class="w-full">
+                <input required style="box-shadow: inset 3px 3px 0px 0px #A06600;" class="bg-amascuro p-3 rounded-[5px] w-full text-gray-800 placeholder:text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400" type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                <label for="email" style="font-family:'AgencyFB','Courier New', Courier, monospace;font-size: 16px;font-weight: 600;">Correo electrónico</label>
+            </div>
+        </div>
+
+        
+        <div class="flex space-x-4 items-center justify-center w-full h-12">
+            <div class="flex items-center justify-center w-12 h-12 transparent rounded-full">
+                <img class="h-10" src="../Img/Pass.png" alt="Icono de contraseña">
+            </div>
+            <div class="w-full">
+                <input required style="box-shadow: inset 3px 3px 0px 0px #A06600;" class="bg-amascuro p-3 rounded-[5px] w-full text-gray-800 placeholder:text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400" type="password" id="pass" name="pass" placeholder="Contraseña" required>
+                <label for="pass" style="font-family:'AgencyFB','Courier New', Courier, monospace;font-size: 16px;font-weight: 600;">Contraseña</label>
+            </div>
+        </div>
+
+        <!-- Campo: Fecha/Hora -->
+        <div class="flex space-x-4 items-center justify-center w-full">
+            <div class="flex items-center justify-center w-12 h-12 transparent rounded-full">
+                <img class="h-10" src="../Img/Sage.png" alt="Icono de fecha">
+            </div>
+            <div class="w-full">
+                <input required style="box-shadow: inset 3px 3px 0px 0px #A06600;" class="bg-amascuro p-3 rounded-[5px] w-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400" type="datetime-local" id="fecha" name="fecha" required>
+                <label for="fecha" style="font-family:'AgencyFB','Courier New', Courier, monospace;font-size: 16px;font-weight: 600;">Fecha de nacimiento</label>
+            </div>
+            
+        </div>
+
+        <hr style="border: 1px solid black; width: 100%; margin: 4px;">
+        
+        
+        <button  type="submit" class="bg-amaluzo hover:translate-y-1 shadow-[0px_10px_0px_0px_rgba(0,0,0,1)] hover:shadow-[0px_5px_0px_0px_rgba(0,0,0,1)] transition-all font-bold p-3 rounded w-3/4">
+            <legend style="font-family: 'CageWorld','Courier New', Courier, monospace;">Crear cuenta</legend>
+        </button>
+        <legend style="font-family: 'AgencyFB', 'Courier New', Courier, monospace; font-weight: 600;" class="cursor-pointer hover:underline transition duration-300 ease-in-out">Iniciar como invitado</legend>
+    </form>
+    <form onsubmit="initSesion(event)" id="login" style="background-color: #EBEBD3; box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 1);" class="hidden relative z-10 p-4 w-11/12 md:w-[30%] h-fit mx-auto rounded-[50px] shadow-lg flex flex-col items-center space-y-6">
+    
+    <div class="flex space-x-4 items-center justify-center w-3/4">
+        <button onclick="togle(2)" type="button" class="text-lg p-2 font-semibold hover:bg-amaclaro transition duration-300 ease-in-out hover:scale-105 hover:rounded-[15px]">
+            <span style="color: black; font-family: 'CageWorld', 'Courier New', Courier, monospace;">Iniciar sesión</span>
+        </button>
+        <button onclick="togle(1)" type="button" class="text-lg p-2 font-semibold hover:bg-amaclaro transition duration-300 ease-in-out hover:scale-105 hover:rounded-[15px]">
+            <span style="color: black; font-family: 'CageWorld', 'Courier New', Courier, monospace;">Crear cuenta</span>
+        </button>
+    </div>
+
+    <div class="flex space-x-4 items-center justify-center w-full">
+        <div class="flex items-center justify-center w-12 h-12 transparent rounded-full">
+            <img class="h-10" src="../Img/Yu.png" alt="Icono de usuario">
+        </div>
+        <div class="w-full flex flex-col">
+            <input style="box-shadow: inset 3px 3px 0px 0px #A06600;" class="bg-amascuro p-3 rounded-[5px] w-full text-gray-800 placeholder:text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400" type="text" id="userVer" name="userVer" placeholder="Usuario" required>
+            <label for="userVer" class="mt-1" style="font-family: 'AgencyFB', 'Courier New', Courier, monospace; font-size: 16px; font-weight: 600;">Nombre de usuario</label>
+        </div>
+    </div>
+
+    <div class="flex space-x-4 items-center justify-center w-full py-2">
+        <div class="flex items-center justify-center w-12 h-12 transparent rounded-full">
+            <img class="h-10" src="../Img/Pass.png" alt="Icono de contraseña">
+        </div>
+        <div class="w-full flex flex-col">
+            <input style="box-shadow: inset 3px 3px 0px 0px #A06600;" class="bg-amascuro p-3 rounded-[5px] w-full text-gray-800 placeholder:text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400" type="password" id="passVer" name="passVer" placeholder="Contraseña">
+            <label for="passVer" class="mt-1" style="font-family: 'AgencyFB', 'Courier New', Courier, monospace; font-size: 16px; font-weight: 600;">Contraseña</label>
+        </div>
+    </div>
+
+    <hr style="border: 1px solid black; width: 100%; margin: 4px;">
+    
+    <button type="submit" class="bg-amaluzo shadow-[0px_10px_0px_0px_rgba(0,0,0,1)] hover:shadow-[0px_5px_0px_0px_rgba(0,0,0,1)] hover:translate-y-2 transition-all font-bold p-3 rounded w-3/4">
+        <span style="font-family: 'CageWorld', 'Courier New', Courier, monospace;">Iniciar sesión</span>
+    </button>
+
+    <button type="button" class="cursor-pointer hover:underline transition duration-300 ease-in-out">
+        <span style="font-family: 'AgencyFB', 'Courier New', Courier, monospace; font-weight: 600;">Iniciar como invitado</span>
+    </button>
+
+</form>
+</main>
+
+    <script src="https://cdn.jsdelivr.net/npm/flyonui@2.4.1/flyonui.min.js"></script>
+    <script src="../JS/Ads.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if(!localStorage.getItem("users")){
+                const users = {
+                    "Usuarios":{
+                        "0":{
+                            "user":"Admin",
+                            "password":"Lambda123",
+                            "email":"cor@gmail.com",
+                            "fecha":"2000-01-01T00:00",
+                            "active":false
+                        },
+                        "1":{
+                            "user":"Guest",
+                            "password":"",
+                            "email":"",
+                            "fecha":"2000-01-01T00:00",
+                            "active":false
+                        }
+                    }
+                }
+                localStorage.setItem("users", JSON.stringify(users));   
+            }else{
+                let users = JSON.parse(localStorage.getItem("users"));
+                let activeUser = null;
+                for(let i=0;i < Object.keys(users.Usuarios).length;i++){
+                    if(users.Usuarios[i].active){
+                        activeUser = users.Usuarios[i];
+                        break;
+                    }
+                }
+                if(activeUser){
+                    alert("Bienvenido de nuevo, "+activeUser.user+"!");
+                    window.location.href = '../index.html'
+                }
+            }
+        });
+        function inactive(array){
+            for(let i=0;i < Object.keys(array.Usuarios).length;i++){
+                array.Usuarios[i].active = false
+            }
+        }
+        function createUser(e){
+            //if(e) e.preventDefault();
+            let flag = true
+            let user = document.getElementById("user").value;
+            let pass = document.getElementById("pass").value;
+            let email = document.getElementById("email").value;
+            let fecha = document.getElementById("fecha").value;
+            if(user == '' || pass == '' || email== '' || fecha == '' || !(email.includes('@'))) flag = false
+            let users = JSON.parse(localStorage.getItem("users"));
+            inactive(users)
+            let id = Object.keys(users.Usuarios).length;
+            users.Usuarios[id] = {
+                "user":user,
+                "password":pass,
+                "email":email,
+                "fecha":fecha,
+                "active":true
+            }
+            if(flag) localStorage.setItem("users", JSON.stringify(users));
+        }
+        function initSesion(e){
+            if(e) e.preventDefault();
+            let user = document.getElementById("userVer").value;
+            let pass = document.getElementById("passVer").value;
+            let users = JSON.parse(localStorage.getItem("users"));
+            let flag = false;
+            for(let i=0;i < Object.keys(users.Usuarios).length;i++){
+                if(users.Usuarios[i].user == user && users.Usuarios[i].password == pass){
+                    inactive(users);
+                    users.Usuarios[i].active = true;
+                    localStorage.setItem("users", JSON.stringify(users));
+                    alert("Bienvenido de nuevo, "+users.Usuarios[i].user+"!");
+                    window.location.href = '../index.html'
+                    flag = true;
+                    break;
+                }
+            }
+            if(!flag) alert("Usuario o contraseña incorrectos");
+        }
+        
+    function togle(as){
+        let create = document.getElementById("create");
+        let login = document.getElementById("login");
+        if(as == 1){
+            create.classList.remove("hidden");
+            login.classList.add("hidden");
+        }else{
+            login.classList.remove("hidden");
+            create.classList.add("hidden");
+        }
+    }
+    </script>
+</body>
+</html>

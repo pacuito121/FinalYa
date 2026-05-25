@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flyonui@2.4.1/flyonui.min.css">
+    <link rel="stylesheet" href="../CSS/fonts.css">
+    <link rel="stylesheet" href="../CSS/anim2.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body style="background-color: #EBEBD3;" class="min-h-screen flex flex-col">
+    <header style="background-color: #DA4167; box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 1);" class="z-40 h-fit flex items-center justify-between p-4 m-4 mx-12 border-2 border-black">
+
+        <div class="w-1/4 flex items-center space-x-2 cursor-pointer">
+            <div onclick="window.location.href='../index.html'" class="flex items-end justify-center space-x-2 hover:rotate-3 hover:scale-110 transition-all">
+                <img src="../Img/Logo_A.png" class="h-14" alt="Logo Risko">
+                <p class="text-4xl font-bold text-white Cage">Risko</p>
+            </div>
+        </div>
+        <nav class="w-2/4 flex justify-center space-x-4">
+            <a href="galeria.html" style="color:black;background-color:#EBEBD3;font-family:'CaracolIsland','Courier New', Courier, monospace;font-size:24px;" class="px-3 py-2 w-1/4 text-center font-bold hover:translate-y-1 hover:shadow-none transition-all">Galería</a>
+            <a href="calendario.html" style="color:black;background-color:#EBEBD3;font-family:'CaracolIsland','Courier New', Courier, monospace;font-size:24px;" class="px-3 py-2 w-1/4 text-center font-bold hover:translate-y-1 hover:shadow-none transition-all">Calendario</a>
+            <a href="promocionales.html" style="color:black;background-color:#EBEBD3;font-family:'CaracolIsland','Courier New', Courier, monospace;font-size:24px;" class="px-3 py-2 w-1/4 text-center font-bold hover:translate-y-1 hover:shadow-none transition-all">Promocionales</a>
+            <a href="menu.html" style="color:black;background-color:#F4D35E; border: 2px solid black; box-shadow: 0px 3px 0px 0px rgba(0,0,0,1);font-family:'CaracolIsland','Courier New', Courier, monospace;font-size:24px;" class="px-3 py-2 w-1/4 text-center font-bold hover:translate-y-1 hover:shadow-none transition-all">Menu</a>
+        </nav>
+        <div class="w-1/4 flex justify-end pr-4">
+            <div id="profile" ondblclick="closeSesion()" onclick="if(!on){window.location.href='login.html'}" style="background-color: thistle; border: 2px solid black; box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 1);background-size: contain;" class="w-12 h-12 rounded-full hover:scale-110 transition-all cursor-pointer"></div>
+        </div>
+    </header>
+    <main>
+        <h2 class="TresD text-[48px] text-black text-center">Galeria</h2>
+        <div class="space-x-4 flex flex-row items-center  justify-center w-full my-4">
+            <button style="border: 2px solid black;font-weight: 400;" class="w-[10%] Acumin px-4 py-2 bg-Barillo shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] rotate-[5deg] hover:-translate-y-2 hover:shadow-[3px_8px_0px_0px_rgba(0,0,0,1)] -skew-x-[6deg] transition-all duration-300">Eventos</button>
+            <button style="border: 2px solid black;font-weight: 400;" class="w-[10%] Acumin px-4 py-2 bg-Bazul shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] -rotate-[5deg] hover:-translate-y-2 hover:shadow-[3px_8px_0px_0px_rgba(0,0,0,1)] -skew-x-[6deg] transition-all duration-300">Torneos</button>
+            <button style="border: 2px solid black;font-weight: 400;" class="w-[10%] Acumin px-4 py-2 bg-Barillo shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] rotate-[5deg] hover:-translate-y-2 hover:shadow-[3px_8px_0px_0px_rgba(0,0,0,1)] -skew-x-[6deg] transition-all duration-300">Bazares</button>
+            <button style="border: 2px solid black;font-weight: 400;" class="w-[10%] Acumin px-4 py-2 bg-Bazul shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] -rotate-[5deg] hover:-translate-y-2 hover:shadow-[3px_8px_0px_0px_rgba(0,0,0,1)] -skew-x-[6deg] transition-all duration-300">Productos</button>
+            <button style="border: 2px solid black; font-weight: 400;" class="w-[10%] Acumin py-2 px-4 bg-Barillo shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] rotate-[5deg] hover:-translate-y-2 hover:shadow-[3px_8px_0px_0px_rgba(0,0,0,1)] -skew-x-[6deg] transition-all duration-300">XD</button>
+            <button style="border: 2px solid black;font-weight: 400;" class="rounded-[10px] Acumin px-4 py-2 bg-Bazul shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] -rotate-[5deg] hover:-translate-y-2 hover:shadow-[3px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-300">
+                <img class="h-8" src="../Img/Lupa.png" alt="">
+            </button>
+            <button style="border: 2px solid black; font-weight: 400;" class="rounded-[10px] Acumin py-2 px-4 bg-Barillo shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] rotate-[5deg] hover:-translate-y-2 hover:shadow-[3px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-300">
+                <img class="h-8" src="../Img/Filtros.png" alt="">
+            </button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[250px] w-full max-w-7xl mx-auto p-4">
+
+    
+    <div style="border:10px outset #BC5E00" class="relative w-full h-full shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] bg-black overflow-hidden cursor-pointer hover:-translate-y-6 hover:-translate-x-3  transition-all">
+        <img class="w-full h-full object-cover" src="../Img/Img1.png" alt="Galletas">
+        <div class="absolute bottom-4 right-4 bg-white border-2 border-black px-3 py-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] rotate-[-4deg] hover:rotate-0 transition-transform">
+            <span class="AcuminReal text-black font-bold text-lg">Hadouken!!</span>
+        </div>
+    </div>
+
+    
+    <div style="border:10px outset #BC5E00"class="relative w-full h-full shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] bg-black overflow-hidden cursor-pointer hover:-translate-y-6 hover:-translate-x-3  transition-all">
+        <img class="w-full h-full object-cover" src="../Img/Img2.png" alt="Chicas Pikachu">
+        <div class="absolute bottom-4 right-4 bg-white border-2 border-black px-3 py-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] rotate-[-4deg] hover:rotate-0 transition-transform">
+            <span class="AcuminReal text-black font-bold text-lg">Mira, ya mero paso el 2do</span>
+        </div>
+    </div>
+
+    
+    <div style="border:10px outset #BC5E00" class="relative w-full h-full md:row-span-2 border-[10px] border-[#8a5a3a] shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] bg-black overflow-hidden cursor-pointer hover:-translate-y-6 hover:-translate-x-3  transition-all">
+        <img class="w-full h-full object-cover object-center" src="../Img/Img3.png" alt="Malteada">
+        <div class="absolute bottom-4 right-4 bg-white border-2 border-black px-3 py-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] rotate-[-4deg] hover:rotate-0 transition-transform">
+            <span class="AcuminReal text-black font-bold text-lg">Mira.. mi dedo</span>
+        </div>
+    </div>
+
+    
+    <div style="border:10px outset #BC5E00" class="relative w-full h-full shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] bg-black overflow-hidden cursor-pointer hover:-translate-y-6 hover:-translate-x-3  transition-all">
+        <img class="w-full h-full object-cover" src="../Img/Img4.png" alt="Café">
+        <div class="absolute bottom-4 right-4 bg-white border-2 border-black px-3 py-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] rotate-[-4deg] hover:rotate-0 transition-transform">
+            <span class="AcuminReal text-black font-bold text-lg">Y la gente!?</span>
+        </div>
+    </div>
+
+    
+    <div style="border:10px outset #BC5E00" class="relative w-full h-full shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] bg-black overflow-hidden cursor-pointer hover:-translate-y-6 hover:-translate-x-3  transition-all">
+        <img class="w-full h-full object-cover" src="../Img/Img5.png" alt="Local">
+        <div class="absolute bottom-4 right-4 bg-white border-2 border-black px-3 py-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] rotate-[-4deg] hover:rotate-0 transition-transform">
+            <span class="AcuminReal text-black font-bold text-lg">Pika-ACHU!!...Gracias</span>
+        </div>
+    </div>
+
+    
+    <div style="border:10px outset #BC5E00" class="relative w-full h-full md:col-span-2 md:row-span-2 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] bg-black overflow-hidden cursor-pointer hover:-translate-y-6 hover:-translate-x-3  transition-all">
+        <img class="w-full h-full object-cover" src="../Img/Img6.png" alt="Café Pikachu">
+        <div class="absolute bottom-6 right-6 bg-white border-2 border-black px-3 py-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] rotate-[4deg] hover:rotate-0 transition-transform">
+            <span class=" AcuminRealtext-black font-bold text-xl">Vaya desperdicio</span>
+        </div>
+    </div>
+
+    
+    <div style="border:10px outset #BC5E00" class="relative w-full h-full  shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] bg-black overflow-hidden cursor-pointer hover:-translate-y-6 hover:-translate-x-3  transition-all">
+        <img class="w-full h-full object-cover" src="../Img/Img7.png" alt="Arcade Pacman">
+        <div class="absolute bottom-4 right-4 bg-white border-2 border-black px-3 py-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] rotate-[-4deg] hover:rotate-0 transition-transform">
+            <span class="AcuminReal text-black font-bold text-lg">Y que la beba feliz!</span>
+        </div>
+    </div>
+
+    <div style="border:10px outset #BC5E00" class="relative w-full h-full shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] bg-black overflow-hidden cursor-pointer hover:-translate-y-6 hover:-translate-x-3  transition-all">
+        <img class="w-full h-full object-cover object-top" src="../Img/Img8.png" alt="Street Fighter">
+        <div class="absolute bottom-4 right-4 bg-white border-2 border-black px-3 py-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] rotate-[4deg] hover:rotate-0 transition-transform">
+            <span class="AcuminReal text-black  text-lg">Supa Galletas</span>
+        </div>
+    </div>
+
+</div>
+    </main>
+    <footer class="w-full bg-black p-2 flex flex-col h-fit space-y-4">
+        <section section class="flex flex-row justify-between items-center w-full h-fit px-6">
+            <div >
+                <div onclick="window.location.href='index.html'" class="flex items-end justify-center space-x-2 hover:rotate-3 hover:scale-110 transition-all">
+                    <img src="../Img/LogoB.png" class="h-24" alt="Logo Risko">
+                    <p class="text-[48px] font-bold text-white Cage" style="filter: drop-shadow(0px 2px 0px #CE8900);">Risko</p>
+                </div>
+                <span class="text-[32px] AcuminReal text-white" style="filter: drop-shadow(2px 2px 0px #CC5200);">Documentos legales</span>
+                <div class="w-full text-left px-4 text-white">
+                    <p class="Acumin textLaing">Politica de privacidad</p>
+                    <p class="Acumin textLaing">Aviso legal</p>
+                    <p class="Acumin textLaing">Politica de cookies</p>
+                    <p class="Acumin textLaing">Términos y condiciones</p>
+                </div>
+            </div>
+            <div class="h-full">
+                <div class="h-1/5 relative space-y-4 flex flex-col justify-center">
+                    <span class=" text-[32px] AcuminReal text-white text-center" style="filter: drop-shadow(2px 2px 0px #45a2ff);">Ubicación y contacto</span>
+                    <div class="flex space-x-4 items-center justify-start w-full">
+                        <div class="flex items-center justify-center w-12 h-12 transparent rounded-full">
+                            <img class="h-8" src="../Img/Direc.png" alt="">
+                        </div>
+                        <div>
+                            <span class="Acumin text-[12px] text-white">Laguna De Tamiagua, Esquina Con C. Valle de Cuernavaca S/N, Partido Doblado, 32424 Juárez, Chih.</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4 items-center justify-start w-full">
+                        <div class="flex items-center justify-center w-12 h-12 transparent rounded-full">
+                            <img class="h-8" src="../Img/Phone.png" alt="">
+                        </div>
+                        <div>
+                            <span class="Acumin text-[12px] text-white">+52 656 292 2040</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4 items-center justify-start w-full">
+                        <div class="items-center justify-center w-12 h-12 transparent rounded-full">
+                            <img class="h-8" src="../Img/Mail.png" alt="">
+                        </div>
+                        <div>
+                            <span class="Acumin text-[12px] text-white">RiskoAc@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-row space-x-4 justify-center items-center">
+                        <img class="h-12" src="../Img/DA.png" alt="">
+                        <img class="h-12" src="../Img/Xter.png" alt="">
+                        <img class="h-12" src="../Img/Yutu.png" alt="">
+                        <img class="h-12" src="../Img/Face.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-white">
+                <span class="text-[32px] AcuminReal text-white" style="filter: drop-shadow(2px 2px 0px #CE8900);">Horarios</span>
+                <article>
+                    <div class="space-x-4">
+                        <span class="Acumin text-[20px]">
+                            Lunes - Viernes
+                        </span>
+                        <span class="AcuminReal italic text-[20px]">
+                            08:00 - 18:00
+                        </span>
+                    </div>
+                     <hr style="border: 0.5px solid rgb(254, 254, 254); width:100%; margin: 4px;">
+                     <div class="w-full flex flex-row justify-between">
+                        <span class="Acumin text-[20px]">
+                            Sabado
+                        </span>
+                        <span class="AcuminReal italic text-[20px]">
+                            11:00 - 20:00
+                        </span>
+                    </div>
+                     <hr style="border: 0.5px solid rgb(254, 254, 254); width:100%; margin: 4px;">
+                     <div class="w-full flex flex-row justify-between items-center">
+                        <span class="Acumin text-[20px]" style="color:#CE8900">
+                            Domingo
+                        </span>
+                        <img src="../Img/Mimir.png" alt="">
+                    </div>
+                </article>
+            </div>
+        </section>
+        <hr style="border: 0.5px solid rgb(254, 254, 254); width: 100%; margin: 4px;">
+        <section class="flex flex-row justify-between items-center w-full h-fit">
+            <span class="Acumin text-white text-[20px] ">@RiskoOficial</span>
+            <span class="Acumin text-white text-[20px] ">"...Y hasta que el cuerpo aguante"</span>
+        </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flyonui@2.4.1/flyonui.min.js"></script>
+    <script src="../JS/Ads.js"></script>
+    <script>     
+        function closeSesion(){
+            if(confirm("Deseas cerrar sesión?")){
+                let array = JSON.parse(localStorage.getItem("users"))
+                for(let i=0;i < Object.keys(array.Usuarios).length;i++){
+                    array.Usuarios[i].active = false;
+                }
+                localStorage.setItem("users", JSON.stringify(array))
+                location.reload()
+            }
+        }
+        let name = ''
+        let on = false
+        document.addEventListener("DOMContentLoaded",()=>{
+            let users = JSON.parse(localStorage.getItem("users"));
+            name = ''
+            on = false
+            if(users){
+                for(let i = 0; i < Object.keys(users.Usuarios).length; i++){
+                    if(users.Usuarios[i].active){
+                        on = true;
+                        name = users.Usuarios[i].user;
+                        break;
+                    } 
+                }
+                let foto = document.getElementById("profile");
+                if(on){
+                    
+                    if(name == "Guest") {
+                        foto.style.backgroundImage = 'url("../Img/Invitado.png")';
+                    } else if(name == "Admin") {
+                        foto.style.backgroundImage = 'url("../Img/Admin.png")';
+                    } else if(name != ""){
+                        foto.style.backgroundImage = 'url("../Img/Usuario.png")';
+                    }
+                }else{
+                    foto.style.backgroundImage = "none"
+                }
+            }
+        })
+        
+    </script>
+</body>
+</html>

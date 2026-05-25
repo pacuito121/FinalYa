@@ -1,0 +1,155 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #ebebd3;
+}
+
+h1{
+    font-family: "Poetsen One", sans-serif;
+    color: #ebebd3;
+
+    text-shadow: 8px 2px 0px black;
+    -webkit-text-stroke: black 2px;
+    font-size: 100px !important;
+
+    display: flex;
+    justify-content: center;
+}
+
+.Octubre{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Octubre img{
+    transform: skewX(20deg);
+    transition: 0.3s ease;
+}
+
+.Octubre img:hover{
+    transform: skewX(0deg);
+}
+
+.Dia{
+    width: 100px;
+    height: 80px;
+    background-color: #d2ebff;
+    border-top: 5px solid #000000;
+    border-right: 10px solid #000000;
+    border-bottom: 10px solid #000000;
+    border-left: 5px solid #000000;
+    /*box-shadow: 12px 12px 2px 2px black;*/
+    transform: skewX(-20deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.Dia:last-child{
+    background-color: #878e93;
+}
+
+.Dia:hover:not(.Dia:last-child){
+    border-style: double;
+    transform: scale(1.1);
+    background-color: #b7dfff;
+}
+
+.Circulo{
+
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: white;
+
+    display: flex;
+
+    position: absolute; 
+    z-index: 2;
+    margin-left: 110px;
+    margin-top: 70px;
+
+}
+
+.Dia span{
+    font-family: "Luckiest Guy", cursive;
+    font-size: 30px;
+    text-shadow: -2px 4px 0px black;
+    -webkit-text-stroke: 0.5px black;
+    color: rgb(255, 255, 255);
+
+    display: flex;
+
+    position: absolute; 
+    z-index: 3;
+    margin-left: 110px;
+    margin-top: 70px;
+}
+
+.Categorias{
+    display: flex; 
+    justify-content: center;
+    gap: 100px;
+}
+
+.Calendario{
+
+    position: relative;
+
+    width: fit-content;
+
+    margin: 0 auto;
+}
+
+.Izquierda, .Derecha{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-size: 50px;
+    color: black;
+
+    z-index: 10;
+    transition: 0.2s;
+}
+
+.Izquierda{
+    left: -10px;
+}
+
+.Derecha{
+    right: -10px;
+}
+
+.Izquierda:hover, .Derecha:hover{
+    transform: translateY(-50%) scale(1.2);
+}
+
+h3{
+    font-family: "Poetsen One", sans-serif;
+    -webkit-text-stroke: black 1px;
+    font-size: 30px !important;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+.Categorias img{
+    float: left; 
+    margin-right: 5px;
+    margin-top: 10px;
+}

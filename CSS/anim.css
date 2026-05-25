@@ -1,0 +1,165 @@
+#Fondom {
+    position: fixed; /* Se queda fijo al fondo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Corta las figuras cuando intentan salirse */
+    z-index:0; /* Lo manda detrás del login */
+}
+
+.Circle{
+    position: absolute;
+    width: 7vw;
+    height: 7vw;
+    border: 10px solid crimson;
+    border-radius: 50%;
+}
+.X{
+    position: absolute;
+    width: 7vw;
+    height: 7vw;
+}
+.X::before, .X::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 100%;
+    border-radius: 5px;
+}
+.X::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.X::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.Cube{
+    position: absolute;
+    width: 7vw;
+    height: 7vw;
+    border-radius: 5px;
+}
+.Tria {
+  position: absolute;
+  width: 7vw;
+  height: 7vw;
+
+  /* Polígono continuo para crear un triángulo hueco transparente */
+  clip-path: polygon(
+    50% 0%,       /* 1. Punta superior (exterior) */
+    0% 100%,      /* 2. Esquina inferior izquierda (exterior) */
+    100% 100%,    /* 3. Esquina inferior derecha (exterior) */
+    50% 0%,       /* 4. Regresa a la punta superior para cerrar el exterior */
+    
+    50% 15%,      /* 5. Hace un corte invisible hacia la punta superior (INTERIOR) */
+    85% 90%,      /* 6. Esquina inferior derecha (INTERIOR) */
+    15% 90%,      /* 7. Esquina inferior izquierda (INTERIOR) */
+    50% 15%       /* 8. Regresa a la punta superior (INTERIOR) para cerrar el hueco */
+  );
+}
+
+
+#N1{
+    top: 33%;
+    border: 10px solid #105599;
+    animation: N1 4s alternate-reverse infinite;
+}
+#N2{
+    top: 63%;
+    border: 10px solid #f1517c;
+    animation: N2 6s alternate-reverse infinite;
+}
+#N3{
+    top: 90%;
+    background-color: #ffeec0; 
+    animation: N3 8s alternate-reverse infinite;
+}
+#N4{
+    top: 90%;
+    left: 16%;
+    animation: N3 10s alternate-reverse infinite;
+}
+#N4::before, #N4::after {
+    background-color: #ffb298;
+}
+#N5{
+    top: 90%;
+    left:31%;
+    border: 10px solid #f1517c;
+    animation: N3 10s alternate-reverse infinite;
+}
+#N6{
+    top: 90%;
+    left: 45%;
+    border:10px solid #ffeec0;
+    animation: N3 8s alternate-reverse infinite;
+}
+#N7{
+    top: 90%;
+    left: 59%;
+    animation: N2 6s alternate-reverse infinite;
+    background-color: #ffb298;;
+}
+
+#N8{
+    top: 90%;
+    left: 75%;
+    animation: N1 4s alternate-reverse infinite;
+}
+#N8::before, #N8::after {
+    background-color:#105599 ;
+}
+@keyframes N1 {
+
+    0% {
+
+        transform: translate(0, 0);
+
+    }
+
+    100% {
+
+        transform: translate(300px,-300px);
+
+    }
+
+}
+
+
+
+@keyframes N2 {
+
+    0% {
+
+        transform: translate(0, 0);
+
+    }
+
+    100% {
+
+        transform: translate(500px,-500px);
+
+    }
+
+}
+
+
+
+@keyframes N3 {
+
+    0% {
+
+        transform: translate(10px, 10px);
+
+    }
+
+    100% {
+
+        transform: translate(700px,-700px);
+
+    }
+
+}
+

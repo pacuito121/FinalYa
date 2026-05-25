@@ -1,0 +1,19 @@
+.textLaing{
+    position: relative;
+    cursor: pointer;
+    width: fit-content;
+}
+.textLaing::after{
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    height: 1px;
+    width: 0%;
+    background-color: aliceblue;
+    transition: 0.2s ease-in;
+}
+.textLaing:hover::after{
+    width: 100%;
+}
+
