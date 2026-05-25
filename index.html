@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flyonui@2.4.1/flyonui.min.css">
+    <link rel="stylesheet" href="CSS/fonts.css">
+    <link rel="stylesheet" href="/CSS/anim2.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body style="background-color: #EBEBD3;" class="min-h-screen flex flex-col">
+    <header style="background-color: #DA4167; box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 1);" class="z-40 h-fit flex items-center justify-between p-4 m-4 mx-12 border-2 border-black">
+
+        <div class="w-1/4 flex items-center space-x-2 cursor-pointer">
+            <div onclick="window.location.href='index.html'" class="flex items-end justify-center space-x-2 hover:rotate-3 hover:scale-110 transition-all">
+                <img src="../Img/Logo_A.png" class="h-14" alt="Logo Risko">
+                <p class="text-4xl font-bold text-white Cage">Risko</p>
+            </div>
+        </div>
+        <nav class="w-2/4 flex justify-center space-x-4">
+            <a href="HTML/galeria.html" style="color:black;background-color:#EBEBD3;font-family:'CaracolIsland','Courier New', Courier, monospace;font-size:24px;" class="px-3 py-2 w-1/4 text-center font-bold hover:translate-y-1 hover:shadow-none transition-all">Galería</a>
+            <a href="HTML/calendario.html" style="color:black;background-color:#EBEBD3;font-family:'CaracolIsland','Courier New', Courier, monospace;font-size:24px;" class="px-3 py-2 w-1/4 text-center font-bold hover:translate-y-1 hover:shadow-none transition-all">Calendario</a>
+            <a href="HTML/promocionales.html" style="color:black;background-color:#EBEBD3;font-family:'CaracolIsland','Courier New', Courier, monospace;font-size:24px;" class="px-3 py-2 w-1/4 text-center font-bold hover:translate-y-1 hover:shadow-none transition-all">Promocionales</a>
+            <a href="HTML/menu.html" style="color:black;background-color:#F4D35E; border: 2px solid black; box-shadow: 0px 3px 0px 0px rgba(0,0,0,1);font-family:'CaracolIsland','Courier New', Courier, monospace;font-size:24px;" class="px-3 py-2 w-1/4 text-center font-bold hover:translate-y-1 hover:shadow-none transition-all">Menu</a>
+        </nav>
+        <div class="w-1/4 flex justify-end pr-4">
+            <div id="profile" ondblclick="closeSesion()" onclick="if(!on){window.location.href='HTML/login.html'}" style="background-color: thistle; border: 2px solid black; box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 1);background-size: contain;" class="w-12 h-12 rounded-full hover:scale-110 transition-all cursor-pointer"></div>
+        </div>
+    </header>
+    <main>
+        <section class="w-full gap-3 h-fit relative">
+            <div style="overflow: hidden;" class="w-full relative">
+                <div id="anim" class="h-48 w-48"></div>
+            </div>
+            <div class="Titulo">
+                <h1 class="Sombra">RISKO</h1>
+                <div id="Relleno"></div>
+                <h1 class="Letra">RISKO</h1>
+            </div>
+        </section>
+        <section id="Intro" class="w-full h-fit  p-4 flex flex-row items-center justify-between gap-10">
+            <div id="img" class="w-1/3 rounded-lg relative h-1/3 object-cover h-fit p-8">
+                <img class="space-y-4 border-t-[2vh] border-x-[1vw] border-b-[8vh] border-white rounded-xl -rotate-[10deg] w-full" src="Img/foto1.png" alt="">
+                <img style="bottom: 5%;right: 0%;" src="Img/Hex.png" class="max-h-24 absolute" alt="">
+            </div>
+            <div id="txt" class="w-2/3 space-y-4 text-lg flex flex-col ">
+                <span class="font-bold text-2xl">
+                    ¡Bienvenido a Risko! Tu punto de guardado definitivo en el servidor del mundo real.
+                </span>
+                <span>
+                    ¿Te quedaste sin HP después de un jefe difícil, o tu cerebro acaba de tirar un Error 404 de tanto compilar código?<br>
+                    ¡Tranquilo, aquí hacemos respawn de tu energía a máxima velocidad! Sumérgete en nuestra base secreta, donde <br>
+                    el café oscuro es nuestra poción de maná de grado legendario y cada snack te da un buff <br>
+                    de +10 en destreza y creatividad.
+                </span>
+                <span>
+                    Ya sea que vengas a debatir escalas de poder, a refugiarte mientras planeas tu próxima estrategia para el jefe final, <br> 
+                    o simplemente a estar AFK un rato fuera de la pantalla... en Risko siempre tienes el Player 1. 
+                </span>
+                <span class="font-bold mt-4 italic">
+                    ¡Sube de nivel tu día, recarga tus stats y únete a nuestra guild! 
+                </span>
+            </div>
+        </section>
+        <section id="us" class="flex flex-col items-center bg-amaluzo p-4 text-center">
+            <div class="relative z-10 w-1/3">
+                <div id="galle" class="border-t-[2vh] border-x-[1vw] border-b-[8vh] border-white rounded-xl ">
+                    <img src="Img/foto2.png" alt="" class="w-full h-auto">
+                    <span class="absolute bottom-[5%] right-[5%] Mano text-2xl">"Hasta que el rey caiga"</span>
+                </div>
+            </div>
+            <h2 class="TresD text-[48px] text-black text-center">"WE ARE..."</h2>
+            <P>
+                Hace mucho tiempo, un visionario considero que la libertad de los individuos se veia mermada por <br>
+                lugares mal iluminados y aburridos. Fue entonces cuando su mente razono la idea de crear un <br>
+                espacio donde el beber y creer se volverian uno solo.... Luego la cuestion economica le <br>
+                pego y tuvo que meter mas personas a la fuerza. Ahora, con nuestro servicio y <br>
+                calidad, nos disponemos a que cada cliente y amigo pueda disfrutar.
+            </P>
+        </section>
+        <section id="title" class="bg-white w-full">
+            <h2 class="TresD text-[48px] text-black text-center">Y ofrecemos...?</h2>
+        </section>
+        <section class="w-full">
+            <div style="background-image: url('Img/SupermanR.png');" class="bg-Rojino ImgBg p-4">
+                <div class="w-1/3 p-4 flex flex-row gap-4 items-center rounded-xl bg-Fonder shadow-[5px_5px_0px_3px_rgba(0,0,0,1)]">
+                    <img src="Img/IconN.png" alt="" class="w-32 border-4 border-black rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <div>
+                        <h2 class="text-xl font-bold italic">Un lugar donde poderse recargar!</h2>
+                        <span class="Acumin">
+                            Tu zona segura para tomar un descanso, disfrutar de un buen café y recuperar energía antes de tu próxima gran aventura.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div style="background-image: url('Img/LukyBoxA-.png'); " class="bg-Azulo ImgBg p-4 flex items-center justify-center">
+                <div class="w-1/3 p-4 flex flex-row gap-4 items-center rounded-xl bg-Fonder shadow-[5px_5px_0px_3px_rgba(0,0,0,1)]">
+                    <img src="Img/IconV.png" alt="" class="w-32 border-4 border-black rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <div>
+                        <h2 class="text-xl font-bold italic">Un espacio donde poder vivir la emoción!</h2>
+                        <span class="Acumin">
+                            Un punto de encuentro vibrante diseñado para experimentar torneos, transmisiones en vivo y la pasión de tus hobbies favoritos.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div style="background-image: url('Img/DBGR.png');" class="bg-Rojino ImgBg p-4 flex items-center justify-end">
+                <div class="w-1/3 p-4 flex flex-row gap-4 items-center rounded-xl bg-Fonder shadow-[5px_5px_0px_3px_rgba(0,0,0,1)]">
+                    <img src="Img/IconC.png" alt="" class="w-32 border-4 border-black rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <div>
+                        <h2 class="text-xl font-bold italic">Un sitio donde poder conectar!</h2>
+                        <span class="Acumin">
+                            El lugar ideal para conectar con personas que comparten tus mismos gustos, armar retas y descubrir tu próximo equipo de juego.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="w-full bg-black p-2 flex flex-col h-fit space-y-4">
+        <section section class="flex flex-row justify-between items-center w-full h-fit px-6">
+            <div >
+                <div onclick="window.location.href='index.html'" class="flex items-end justify-center space-x-2 hover:rotate-3 hover:scale-110 transition-all">
+                    <img src="../Img/LogoB.png" class="h-24" alt="Logo Risko">
+                    <p class="text-[48px] font-bold text-white Cage" style="filter: drop-shadow(0px 2px 0px #CE8900);">Risko</p>
+                </div>
+                <span class="text-[32px] AcuminReal text-white" style="filter: drop-shadow(2px 2px 0px #CC5200);">Documentos legales</span>
+                <div class="w-full text-left px-4 text-white">
+                    <p class="Acumin textLaing">Politica de privacidad</p>
+                    <p class="Acumin textLaing">Aviso legal</p>
+                    <p class="Acumin textLaing">Politica de cookies</p>
+                    <p class="Acumin textLaing">Términos y condiciones</p>
+                </div>
+            </div>
+            <div class="h-full">
+                <div class="h-1/5 relative space-y-4 flex flex-col justify-center">
+                    <span class=" text-[32px] AcuminReal text-white text-center" style="filter: drop-shadow(2px 2px 0px #45a2ff);">Ubicación y contacto</span>
+                    <div class="flex space-x-3 items-center justify-start w-full">
+                        <div class="flex items-center justify-center w-12 h-12 transparent rounded-full">
+                            <img class="h-8" src="../Img/Direc.png" alt="">
+                        </div>
+                        <div>
+                            <span class="Acumin text-[12px] text-white">Laguna De Tamiagua, Esquina Con C. Valle de Cuernavaca S/N, Partido Doblado, 32424 Juárez, Chih.</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4 items-center justify-start w-full">
+                        <div class="flex items-center justify-center w-12 h-12 transparent rounded-full">
+                            <img class="h-8" src="../Img/Phone.png" alt="">
+                        </div>
+                        <div>
+                            <span class="Acumin text-[12px] text-white">+52 656 292 2040</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4 items-center justify-start w-full">
+                        <div class="items-center justify-center w-12 h-12 transparent rounded-full">
+                            <img class="h-8" src="../Img/Mail.png" alt="">
+                        </div>
+                        <div>
+                            <span class="Acumin text-[12px] text-white">RiskoAc@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-row space-x-4 justify-center items-center">
+                        <img class="h-12" src="../Img/DA.png" alt="">
+                        <img class="h-12" src="../Img/Xter.png" alt="">
+                        <img class="h-12" src="../Img/Yutu.png" alt="">
+                        <img class="h-12" src="../Img/Face.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-white">
+                <span class="text-[32px] AcuminReal text-white" style="filter: drop-shadow(2px 2px 0px #CE8900);">Horarios</span>
+                <article>
+                    <div class="space-x-4">
+                        <span class="Acumin text-[20px]">
+                            Lunes - Viernes
+                        </span>
+                        <span class="AcuminReal italic text-[20px]">
+                            08:00 - 18:00
+                        </span>
+                    </div>
+                     <hr style="border: 0.5px solid rgb(254, 254, 254); width:100%; margin: 4px;">
+                     <div class="w-full flex flex-row justify-between">
+                        <span class="Acumin text-[20px]">
+                            Sabado
+                        </span>
+                        <span class="AcuminReal italic text-[20px]">
+                            11:00 - 20:00
+                        </span>
+                    </div>
+                     <hr style="border: 0.5px solid rgb(254, 254, 254); width:100%; margin: 4px;">
+                     <div class="w-full flex flex-row justify-between items-center">
+                        <span class="Acumin text-[20px]" style="color:#CE8900">
+                            Domingo
+                        </span>
+                        <img src="../Img/Mimir.png" alt="">
+                    </div>
+                </article>
+            </div>
+        </section>
+        <hr style="border: 0.5px solid rgb(254, 254, 254); width: 100%; margin: 4px;">
+        <section class="flex flex-row justify-between items-center w-full h-fit">
+            <span class="Acumin text-white text-[20px] ">@RiskoOficial</span>
+            <span class="Acumin text-white text-[20px] ">"...Y hasta que el cuerpo aguante"</span>
+        </section>
+    </footer>
+    <script>
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                window.location.href = "HTML/test.html";
+            }
+        });
+    </script>
+    <script>
+        
+        function closeSesion(){
+            if(confirm("Deseas cerrar sesión?")){
+                let array = JSON.parse(localStorage.getItem("users"))
+                for(let i=0;i < Object.keys(array.Usuarios).length;i++){
+                    array.Usuarios[i].active = false;
+                }
+                localStorage.setItem("users", JSON.stringify(array))
+                location.reload()
+            }
+        }
+        let name = ''
+        let on = false
+        document.addEventListener("DOMContentLoaded",()=>{
+            let users = JSON.parse(localStorage.getItem("users"));
+            name = ''
+            on = false
+            if(users){
+                for(let i = 0; i < Object.keys(users.Usuarios).length; i++){
+                    if(users.Usuarios[i].active){
+                        on = true;
+                        name = users.Usuarios[i].user;
+                        break;
+                    } 
+                }
+                let foto = document.getElementById("profile");
+                if(on){
+                    
+                    if(name == "Guest") {
+                        foto.style.backgroundImage = 'url("Img/Invitado.png")';
+                    } else if(name == "Admin") {
+                        foto.style.backgroundImage = 'url("Img/Admin.png")';
+                    } else if(name != ""){
+                        foto.style.backgroundImage = 'url("Img/Usuario.png")';
+                    }
+                }else{
+                    foto.style.backgroundImage = "none"
+                }
+            }
+        })
+        
+    </script>
+    <script src="JS/Ads.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flyonui@2.4.1/flyonui.min.js"></script>
+</body>
+</html>
