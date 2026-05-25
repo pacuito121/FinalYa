@@ -1,64 +1,55 @@
 @font-face {
     font-family: 'HelpMe'; /* Nombre que tú elijas */
-    src: url('../Tipografia/HelpMe.woff2') format('woff2'),
-         url('../Tipografia/HelpMe.woff2') format('truetype'); /* Ruta y formato */
+    src: url('../Tipografia/HelpMe.woff2') format('woff2');/* Ruta y formato */
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'BaskervilleOldFace'; /* Nombre que tú elijas */
-    src: url('../Tipografia/BaskervilleOF.woff2') format('woff2'),
-         url('../Tipografia/BaskervilleOF.woff2') format('truetype'); /* Ruta y formato */
+    src: url('../Tipografia/BaskervilleOF.woff2') format('woff2');/* Ruta y formato */
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'CageWorld'; /* Nombre que tú elijas */
-    src: url('../Tipografia/Cageworld.woff2') format('woff2'),
-         url('../Tipografia/Cageworld.woff2') format('truetype'); /* Ruta y formato */
+    src: url('../Tipografia/Cageworld.woff2') format('woff2'); /* Ruta y formato */
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'AgencyFB'; /* Nombre que tú elijas */
-    src: url('../Tipografia/AGENCYB.woff2') format('woff2'),
-         url('../Tipografia/AGENCYB.woff2') format('truetype'); /* Ruta y formato */
+    src: url('../Tipografia/AGENCYB.woff2') format('woff2'); /* Ruta y formato */
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'CaracolIsland'; /* Nombre que tú elijas */
-    src: url('../Tipografia/CaracolIsland.woff2') format('woff2'),
-         url('../Tipografia/CaracolIsland.woff2') format('truetype'); /* Ruta y formato */
+    src: url('../Tipografia/CaracolIsland.woff2') format('woff2');/* Ruta y formato */
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Acumin'; /* Nombre que tú elijas */
-    src: url('../Tipografia/Acumin.woff2') format('woff2'),
-         url('../Tipografia/Acumin.woff2') format('truetype'); /* Ruta y formato */
+    src: url('../Tipografia/Acumin.woff2') format('woff2'); /* Ruta y formato */
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'TresD'; /* Nombre que tú elijas */
-    src: url('../Tipografia/Komyca3D.woff2') format('woff2'),
-         url('../Tipografia/Komyca3D.woff2') format('truetype'); /* Ruta y formato */
+    src: url('../Tipografia/Komyca3D.woff2') format('woff2');/* Ruta y formato */
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'TresDFake'; /* Nombre que tú elijas */
-    src: url('../Tipografia/Komyca-Italic.woff2') format('woff2'),
-         url('../Tipografia/Komyca-Italic.woff2') format('truetype'); /* Ruta y formato */
+    src: url('../Tipografia/Komyca-Italic.woff2') format('woff2'); /* Ruta y formato */
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Mano'; /* Nombre que tú elijas */
-    src: url('../Tipografia/BITCBLKAD.woff2') format('woff2'),
-         url('../Tipografia/BITCBLKAD.woff2') format('truetype'); /* Ruta y formato */
+    src: url('../Tipografia/BITCBLKAD.woff2') format('woff2'); /* Ruta y formato */
     font-weight: normal;
     font-style: normal;
 }
